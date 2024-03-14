@@ -314,7 +314,7 @@ body.toggle {
   padding: 0;
   list-style-type: none;
   display: flex;
-  gap: 16px 64px;
+  gap: 16px 40px;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1200px) {
