@@ -1,4 +1,4 @@
-/* Стили с сайта */
+/* Стили с сайта - не переносить */
 
 @font-face {
 	font-family: "Tilda Sans VF";
@@ -50,6 +50,7 @@ body div.bx-yandex-map,
 
 .main {
 	flex-grow: 1;
+	min-height: 200px;
 }
 
 /* Новые стили */
@@ -57,6 +58,7 @@ body div.bx-yandex-map,
 /* .new-header */
 
 body {
+	box-sizing: border-box;
 	&.toggle {
 		// height: 100vh;
 		overflow-y: hidden;

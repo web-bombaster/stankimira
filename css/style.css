@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Стили с сайта */
+/* Стили с сайта - не переносить */
 @font-face {
   font-family: "Tilda Sans VF";
   src: url("../fonts/TildaSans-VF.woff2") format("woff2"), url("../fonts/TildaSans-VF.woff") format("woff");
@@ -45,10 +45,14 @@ body div.bx-yandex-map,
 
 .main {
   flex-grow: 1;
+  min-height: 200px;
 }
 
 /* Новые стили */
 /* .new-header */
+body {
+  box-sizing: border-box;
+}
 body.toggle {
   overflow-y: hidden;
 }

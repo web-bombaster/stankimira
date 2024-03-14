@@ -116,42 +116,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	mobeleSubmenuToggle();
 	window.addEventListener("resize", mobeleSubmenuToggle);
 
-
 	/**
 	 * При ресайзе завкрыаем .mobile-menu
 	 */
 	let mobileMenuClose = function () {
-		const elBody = document.querySelector('body');
-		const elBurger = document.querySelector('.js-burger');
-		const elMobileMenu = document.querySelector('.mobile-menu');
+		const elBody = document.querySelector("body");
+		const elBurger = document.querySelector(".js-burger");
+		const elMobileMenu = document.querySelector(".mobile-menu");
 
 		if (elBody && elBurger && elMobileMenu) {
-			elBody.classList.remove('toggle');
-			elBurger.classList.remove('toggle');
-			elMobileMenu.classList.remove('toggle');
-		};
-
-	};
-
-	window.addEventListener("resize", mobileMenuClose);
-
-
-	/**
-	 * Фиксируем шапку на мобильных, когда появляется бургер
-	 */
-	const headerFixed = function () {
-		if (document.documentElement.clientWidth <= 768) {
-			const heightHeader =
-				document.querySelector(".new-header").offsetHeight; // высота хедера
-			document.body.style.paddingTop = heightHeader + "px";
-		} else {
-			document.body.style.paddingTop = 0;
+			elBody.classList.remove("toggle");
+			elBurger.classList.remove("toggle");
+			elMobileMenu.classList.remove("toggle");
 		}
 	};
 
-	headerFixed();
-	// запускаем headerFixed при ресайзе
-	window.addEventListener("resize", headerFixed);
+	window.addEventListener("resize", mobileMenuClose);
 
 	/**
 	 * Вычисление позиции и размера панели мобильного меню
@@ -253,4 +233,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	moving();
 	window.addEventListener("resize", moving);
+
+	/**
+	 * Фиксируем шапку на мобильных, когда появляется бургер
+	 */
+	const headerFixed = function () {
+		if (document.documentElement.clientWidth <= 768) {
+			const heightHeader =
+				document.querySelector(".new-header").offsetHeight; // высота хедера
+			document.body.style.paddingTop = heightHeader + "px";
+		} else {
+			document.body.style.paddingTop = 0;
+		}
+	};
+
+	headerFixed();
+	// запускаем headerFixed при ресайзе
+	window.addEventListener("resize", headerFixed);
 });
